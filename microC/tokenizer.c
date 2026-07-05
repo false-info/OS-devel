@@ -5,7 +5,14 @@ int main() {
 
     int i = 0;
     while (source[i] != '\0') {
-        if (source[i] == 'p' && source[i + 1] == 'i' && source[i + 2] == 'n') {
+        if (source[i] == 'p' &&
+        source[i + 1] == 'i' &&
+        source[i + 2] == 'n' &&
+        !(source[i + 3] >= 'a' && source[i + 3] <= 'z') &&
+        !(source[i + 3] >= 'A' && source[i + 3] <= 'Z') &&
+        !(source[i + 3] >= '0' && source[i + 3] <= '9') &&
+        source[i + 3] != '_')
+        {
             printf("TOKEN_PIN\n");
             i += 3;
         } 
