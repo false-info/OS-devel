@@ -65,5 +65,6 @@ int main() {
         }
 
     }
+printf("TOKEN_EOF\n");
     return 0;
 }
